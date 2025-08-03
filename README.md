@@ -42,12 +42,22 @@ Follow these instructions to set up the environment and reproduce the results pr
 
     ```sh
     pip install pandas numpy matplotlib
+    ```
     
-    # Install PyTorch dependencies for torch_geometric
-    pip install torch-scatter torch-sparse -f [https://data.pyg.org/whl/torch-$(python](https://data.pyg.org/whl/torch-$(python) -c 'import torch; print(torch.__version__)').html
+    Then, run the following command to install `torch_geometric` and its core dependencies, ensuring compatibility with your system's PyTorch and CUDA versions:
     
-    # Install torch_geometric
-    pip install torch-geometric
+    ```python
+    import torch
+    
+    # 1. Programmatically determine the PyTorch and CUDA versions
+    TORCH_VERSION = torch.__version__.split('+')[0]
+    CUDA_VERSION = torch.version.cuda.replace('.', '')
+    
+    # 2. Install dependencies using the correct link
+    !pip install torch-scatter torch-sparse -f [https://data.pyg.org/whl/torch-](https://data.pyg.org/whl/torch-){TORCH_VERSION}+cu{CUDA_VERSION}.html
+    
+    # 3. Install torch-geometric
+    !pip install torch-geometric
     ```
 
 ---
@@ -59,5 +69,3 @@ The main script `gvf_simulation.py` contains the final implementation of the GVF
 To run the full simulation, execute the following command:
 ```sh
 python gvf_simulation.py
-
-
