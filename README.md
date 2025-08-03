@@ -59,3 +59,11 @@ The main script `gvf_simulation.py` contains the final implementation of the GVF
 To run the full simulation, execute the following command:
 ```sh
 python gvf_simulation.py
+
+---
+
+## Licensing
+
+The source code in this repository is released under the [MIT License](LICENSE).
+
+The figures, images, and other assets located in the `figures/` directory are the creative works of the authors and are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](figures/LICENSE.md) (CC BY-NC-ND 4.0).
