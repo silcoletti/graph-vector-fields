@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-## Licensing
-
-The source code in this repository is released under the [MIT License](LICENSE).
-
-The figures, images, and text content from the associated paper are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](figures/LICENSE.md) (CC BY-NC-ND 4.0).
