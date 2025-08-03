@@ -1,13 +1,61 @@
-# graph-vector-fields
-Official implementation of "Graph Vector Fields: A New Framework for Personalised Risk Assessment"
-This repository contains the official source code and experiments for the paper "Graph Vector Fields: A New Framework for Personalised Risk Assessment". We introduce **Graph Vector Fields (GVFs)**, a novel framework that moves beyond traditional scalar scores to represent health risk as a dynamic, interpretable vector field on a graph.
+# Graph Vector Fields: A New Framework for Personalised Risk Assessment
 
-The code includes:
+This repository contains the official source code and experiments for the paper **"Graph Vector Fields: A New Framework for Personalised Risk Assessment"** by Silvano Coletti and Francesca Fallucchi.
 
-1) A synthetic data generator that creates a complex, dynamic environment with multiple interacting risk factors, including a social graph with contagious risk propagation.
+We introduce **Graph Vector Fields (GVFs)**, a novel framework that moves beyond traditional scalar scores to represent health risk as a dynamic, interpretable vector field on a graph. This work provides a robust proof-of-concept, demonstrating the framework's superiority in modeling complex, heterogeneous, and relational health data compared to standard approaches.
 
-2) The full PyTorch implementation of our specialized Mixture-of-Experts (MoE) model, featuring a Graph Neural Network (GNN) expert and a load balancing loss for stable training.
+## Framework Architecture
 
-3) Scripts to reproduce the empirical validation, including training and evaluation against the baseline model.
+The core of the GVF framework is a **Mixture-of-Experts (MoE) operator** that processes multimodal data through specialized experts. This architecture allows the model to learn and represent different facets of risk, such as environmental, behavioral, and contagious risks, within a unified vector space.
 
-This work provides a robust proof-of-concept for the GVF framework, demonstrating its superior ability to model complex, heterogeneous, and relational health data compared to standard approaches.
+![GVF Framework Architecture](figure1.png)
+[cite_start]*Figure 1: Conceptual architecture of the GVF framework[cite: 68].*
+
+---
+
+## Getting Started
+
+Follow these instructions to set up the environment and reproduce the results presented in the paper.
+
+### Prerequisites
+
+* Python 3.10+
+* PyTorch
+* Git
+
+### Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone [https://github.com/your_username/graph-vector-fields.git](https://github.com/your_username/graph-vector-fields.git)
+    cd graph-vector-fields
+    ```
+
+2.  **Create a virtual environment (recommended):**
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3.  **Install the required libraries:**
+    This project depends on `torch_geometric`. The following commands will install all necessary packages, including the correct versions of `torch_geometric`'s sparse and scatter dependencies for your system's CUDA and PyTorch versions.
+
+    ```sh
+    pip install pandas numpy matplotlib
+    
+    # Install PyTorch dependencies for torch_geometric
+    pip install torch-scatter torch-sparse -f [https://data.pyg.org/whl/torch-$(python](https://data.pyg.org/whl/torch-$(python) -c 'import torch; print(torch.__version__)').html
+    
+    # Install torch_geometric
+    pip install torch-geometric
+    ```
+
+---
+
+## Reproducing the Results
+
+The main script `gvf_simulation.py` contains the final implementation of the GVF-MoE model, the baseline MLP, and the synthetic data generator. Running this script will perform the training, evaluation, and gating network inspection, printing the final comparison table to the console.
+
+[cite_start]To run the full simulation and reproduce the results from Table 3 in the paper[cite: 450], execute the following command:
+```sh
+python gvf_simulation.py
