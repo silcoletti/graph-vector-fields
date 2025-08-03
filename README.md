@@ -8,8 +8,8 @@ We introduce **Graph Vector Fields (GVFs)**, a novel framework that moves beyond
 
 The core of the GVF framework is a **Mixture-of-Experts (MoE) operator** that processes multimodal data through specialized experts. This architecture allows the model to learn and represent different facets of risk, such as environmental, behavioral, and contagious risks, within a unified vector space.
 
-![GVF Framework Architecture](figures/figure1.png)
-*Figure 1: Conceptual architecture of the GVF framework, located in the `figures` directory.*
+![GVF Framework Architecture](figures/overall_view_GVF.png)
+*Figure 1: Conceptual architecture of the GVF framework.*
 
 ---
 
