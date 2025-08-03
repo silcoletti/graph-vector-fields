@@ -8,8 +8,8 @@ We introduce **Graph Vector Fields (GVFs)**, a novel framework that moves beyond
 
 The core of the GVF framework is a **Mixture-of-Experts (MoE) operator** that processes multimodal data through specialized experts. This architecture allows the model to learn and represent different facets of risk, such as environmental, behavioral, and contagious risks, within a unified vector space.
 
-![GVF Framework Architecture](figure1.png)
-[cite_start]*Figure 1: Conceptual architecture of the GVF framework[cite: 68].*
+![GVF Framework Architecture](overall_view_GVF.png)
+*Figure 1: Conceptual architecture of the GVF framework.*
 
 ---
 
@@ -56,6 +56,6 @@ Follow these instructions to set up the environment and reproduce the results pr
 
 The main script `gvf_simulation.py` contains the final implementation of the GVF-MoE model, the baseline MLP, and the synthetic data generator. Running this script will perform the training, evaluation, and gating network inspection, printing the final comparison table to the console.
 
-[cite_start]To run the full simulation and reproduce the results from Table 3 in the paper[cite: 450], execute the following command:
+To run the full simulation and reproduce the results from Table 3 in the paper, execute the following command:
 ```sh
 python gvf_simulation.py
