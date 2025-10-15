@@ -1,5 +1,5 @@
 # %% [markdown]
-# # Graph Neural Fields — Synthetic Proof-of-Concept (Colab A100)
+# # Graph Neural Field — Synthetic Proof-of-Concept (Colab A100)
 # End-to-end, riproducibile. Dipendenze "blindate" per evitare conflitti del resolver.
 # - Dynamic multiplex graph (griglia celle + agenti mobili)
 # - Campo vettoriale rischio r*
