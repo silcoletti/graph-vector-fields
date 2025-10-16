@@ -1,6 +1,6 @@
 # Graph Vector Field: A New Framework for Personalised Risk Assessment
 
-This repository contains the official source code to reproduce the main results for the paper **"Graph Vector Field: A New Framework for Personalised Risk Assessment"** by Silvano Coletti and Francesca Fallucchi.
+This repository contains the official source code to reproduce the main results for the paper **"Graph Vector Field: A New Framework for Personalised Risk Assessment"**.
 
 We introduce **Graph Vector Field (GVF)**, a novel framework that moves beyond traditional scalar scores to represent risk as a dynamic, interpretable vector field on a graph. This work provides a robust proof-of-concept, demonstrating the framework's superiority in modeling complex, heterogeneous, and relational data compared to standard approaches.
 
