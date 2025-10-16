@@ -42,16 +42,3 @@ Follow these instructions to set up the environment and reproduce the results pr
 
 ---
 
-## Reproducing the Results
-
-The main script `gvf_final_experiment.py` contains the final implementation of the context-aware GVF-MoE model and the synthetic data generator used for the "Ultimate Stress Test".
-
-Running this script will perform the full experimental pipeline:
-1.  Generate the synthetic dataset with "super-spreader" and "lockdown" dynamics.
-2.  Train the final GVF-MoE model.
-3.  Evaluate the trained model on the entire dataset to extract the Gating Network's weights.
-4.  Generate and save the plot `gating_weights_analysis.png`, which visualizes the model's adaptive behavior.
-
-To run the full simulation, execute the following command:
-```sh
-python gvf_final_experiment.py
